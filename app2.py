@@ -29,7 +29,7 @@ def hacer_prediccion(satisfaction_level, number_project , dept):
         "dept": dept
       }
     ]).replace("'",'"')
-    url_api = 'http://localhost:8000/predecir'
+    url_api = 'https://diplo-fun-api.herokuapp.com/predecir'
 
     return pd.read_json(requests.post(url=url_api, data=request_data).text)
 if predecir:
